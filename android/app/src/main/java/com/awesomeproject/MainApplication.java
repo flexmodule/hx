@@ -3,6 +3,10 @@ package com.awesomeproject;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
+import com.reactcommunity.rnlocalize.RNLocalizePackage;
+import org.reactnative.camera.RNCameraPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -24,6 +28,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AsyncStoragePackage(),
+            new RNDeviceInfo(),
+            new RNLocalizePackage(),
+            new RNCameraPackage(),
             new RNGestureHandlerPackage()
       );
     }
